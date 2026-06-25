@@ -1,0 +1,266 @@
+:root {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #f5f7fb;
+  background:
+    radial-gradient(circle at top, rgba(103, 132, 255, 0.32), transparent 32%),
+    linear-gradient(160deg, #081120 0%, #0f1f3a 50%, #102949 100%);
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.app-shell {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 32px 20px 64px;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: end;
+  margin-bottom: 28px;
+}
+
+.hero h1 {
+  margin: 0;
+  max-width: 12ch;
+  font-size: clamp(2.8rem, 6vw, 4.8rem);
+  line-height: 0.95;
+}
+
+.hero-copy {
+  max-width: 68ch;
+  color: #c9d7f2;
+}
+
+.hero-badges,
+.pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.badge,
+.pill {
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.8rem;
+  color: #86a7ff;
+}
+
+.auth-grid,
+.content-grid,
+.stat-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.auth-grid,
+.content-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-bottom: 18px;
+}
+
+.stat-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-bottom: 18px;
+}
+
+.stat-grid.compact {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.panel,
+.stat-card,
+.task-card,
+.project-item,
+.mini-card {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(8, 16, 33, 0.75);
+  backdrop-filter: blur(14px);
+  border-radius: 22px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.18);
+}
+
+.panel,
+.stat-card {
+  padding: 22px;
+}
+
+.panel-header h2,
+.panel h2,
+.panel h3 {
+  margin: 0 0 10px;
+}
+
+.inline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stack {
+  display: grid;
+  gap: 14px;
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+}
+
+.field input {
+  padding: 12px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.06);
+  color: inherit;
+}
+
+.button {
+  border: 0;
+  border-radius: 14px;
+  padding: 12px 16px;
+  cursor: pointer;
+}
+
+.button.primary {
+  background: linear-gradient(135deg, #8fb8ff, #5680ff);
+  color: #041120;
+}
+
+.button.ghost {
+  background: rgba(255, 255, 255, 0.1);
+  color: #f5f7fb;
+}
+
+.button.subtle {
+  background: rgba(86, 128, 255, 0.12);
+  color: #a9c1ff;
+  width: 100%;
+  margin-top: 12px;
+}
+
+.alert {
+  margin-bottom: 18px;
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: rgba(255, 132, 132, 0.16);
+  border: 1px solid rgba(255, 132, 132, 0.3);
+}
+
+.demo-credentials,
+.project-list,
+.split-list,
+.column-stack {
+  display: grid;
+  gap: 12px;
+}
+
+.credential-card,
+.mini-card {
+  padding: 14px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.project-item {
+  width: 100%;
+  text-align: left;
+  padding: 18px;
+  color: inherit;
+  cursor: pointer;
+}
+
+.project-item.active {
+  outline: 2px solid #7aa2ff;
+}
+
+.project-item p,
+.task-card p {
+  color: #c9d7f2;
+}
+
+.project-meta,
+.task-card-footer,
+.task-card-header,
+.board-column-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.board-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.board-column {
+  padding: 16px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.task-card {
+  padding: 16px;
+}
+
+.priority {
+  padding: 4px 10px;
+  border-radius: 999px;
+  text-transform: capitalize;
+}
+
+.priority.high {
+  background: rgba(255, 111, 111, 0.16);
+}
+
+.priority.medium {
+  background: rgba(255, 200, 92, 0.16);
+}
+
+.priority.low {
+  background: rgba(76, 202, 149, 0.16);
+}
+
+@media (max-width: 960px) {
+  .hero,
+  .auth-grid,
+  .content-grid,
+  .stat-grid,
+  .board-grid,
+  .stat-grid.compact {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    align-items: start;
+    flex-direction: column;
+  }
+}
